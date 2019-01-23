@@ -2,6 +2,14 @@ platform :ios, '10.0'
 
 use_frameworks!
 target 'Prototype_IOS' do
+pod 'FBSDKCoreKit'
+pod 'FBSDKShareKit'
+pod 'FBSDKLoginKit'
 pod 'Socket.IO-Client-Swift', '~> 13.3.0'
+pod 'GoogleSignIn'
+pod 'SwiftyJSON', '~> 4.0'
+pod 'Alamofire', '~> 4.7'
+pod 'lottie-ios'
+pod 'Hero'
 
 end

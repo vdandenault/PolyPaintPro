@@ -7,16 +7,46 @@
 //
 
 import UIKit
+import GoogleSignIn
+import FBSDKLoginKit
+import UserNotifications
+
+//TODO : FIX CONDITINNAL WRAPPING WITH GUARD STATEMENT
+
+//TODO : FIX CONSTRAINTS SIZING OF IMAGES
+
+//TODO : FIX NAVIGATION STACK
+
+let center = UNUserNotificationCenter.current()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    //MARK: - Application functions
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let options: UNAuthorizationOptions = [.alert, .sound];
+        center.requestAuthorization(options: options) {
+            (granted, error) in
+            if !granted {
+                print("Something went wrong")
+            }
+        }
+        FBSDKApplicationDelegate.sharedInstance().application( application, didFinishLaunchingWithOptions: launchOptions)
+        GIDSignIn.sharedInstance().clientID = "535893802443-g0gjjg40all1qf9cd1ul7udhe7oe0pqe.apps.googleusercontent.com"
         return true
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+         GIDSignIn.sharedInstance().handle(url as URL?,
+                                                 sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,
+                                                 annotation: options[UIApplicationOpenURLOptionsKey.annotation])
+        let handle = FBSDKApplicationDelegate.sharedInstance().application(app, open: url, sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as! String, annotation: options[UIApplicationOpenURLOptionsKey.annotation])
+        
+        return handle
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

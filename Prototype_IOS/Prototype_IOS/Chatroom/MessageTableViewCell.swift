@@ -30,10 +30,7 @@
 
 import UIKit
 
-enum MessageSender {
-  case ourself
-  case someoneElse
-}
+
 
 class MessageTableViewCell: UITableViewCell {
   var messageSender: MessageSender = .ourself

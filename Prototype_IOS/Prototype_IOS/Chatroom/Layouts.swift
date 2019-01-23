@@ -51,7 +51,7 @@ extension ChatRoomViewController {
   }
   
   func loadViews() {
-    navigationItem.title = "Let's Chat!"
+    navigationItem.title = channel.channelName
     navigationItem.backBarButtonItem?.title = "Run!"
     
     view.backgroundColor = UIColor(red: 24/255, green: 180/255, blue: 128/255, alpha: 1.0)
@@ -62,8 +62,6 @@ extension ChatRoomViewController {
     
     view.addSubview(tableView)
     view.addSubview(messageInputBar)
-    view.addSubview(buttonStart)
-    view.addSubview(buttonBack)
     
     messageInputBar.delegate = self
   }

@@ -30,20 +30,6 @@
 
 import UIKit
 
-struct Message {
-    let message: String
-    let senderUsername: String
-    let messageSender: MessageSender
-    let createdAt: String
-    
-    init(message: String, messageSender: MessageSender, username: String, createdAt: String) {
-        self.message = message.withoutWhitespace()
-        self.messageSender = messageSender
-        self.senderUsername = username
-        self.createdAt = createdAt
-    }
-}
-
 extension ChatRoomViewController: UITableViewDataSource, UITableViewDelegate {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = MessageTableViewCell(style: .default, reuseIdentifier: "MessageCell")
