@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Helvetica.ttc">
+            <string>Helvetica-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Prototype_IOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BackGroung_Image" translatesAutoresizingMaskIntoConstraints="NO" id="aUD-Rg-96l">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo_Image" translatesAutoresizingMaskIntoConstraints="NO" id="RvU-W1-QOM">
+                                <rect key="frame" x="264" y="263" width="244" height="242"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="242" id="UM6-Eb-7Jk"/>
+                                    <constraint firstAttribute="width" constant="244" id="jGX-0F-cwV"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x1y-Hm-1Kj">
+                                <rect key="frame" x="225" y="677" width="322" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <state key="normal" title="Button" image="Register_Button"/>
+                                <connections>
+                                    <action selector="registerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eUH-jB-qJO"/>
+                                    <segue destination="Wnd-dZ-hWo" kind="show" id="wAW-n1-hxq"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="User Name" textAlignment="center" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hqt-qP-l7M">
+                                <rect key="frame" x="225" y="559" width="322" height="75"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.09523715101522845" green="0.09523715101522845" blue="0.09523715101522845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RvU-W1-QOM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="264" id="5Ts-K6-d4P"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RvU-W1-QOM" secondAttribute="bottom" constant="519" id="7Ip-Sa-hBa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RvU-W1-QOM" secondAttribute="trailing" constant="260" id="Ncf-EM-OQL"/>
+                            <constraint firstItem="RvU-W1-QOM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="243" id="PfL-sK-3yc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="userNameTextBox" destination="hqt-qP-l7M" id="8Gx-OO-40K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.03125" y="32.8125"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="EYh-cj-n07">
+            <objects>
+                <viewController id="Wnd-dZ-hWo" customClass="IPViewController" customModule="Prototype_IOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h3m-Bw-o4S">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="UiDesignIp" translatesAutoresizingMaskIntoConstraints="NO" id="dA3-BU-S8v">
+                                <rect key="frame" x="0.0" y="-73" width="768" height="1053"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="IP Address" textAlignment="center" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="5yE-aC-dPC">
+                                <rect key="frame" x="180" y="655" width="322" height="33"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.095237151019999994" green="0.095237151019999994" blue="0.095237151019999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="inputIP:" destination="hNR-2y-pd7" eventType="editingDidEnd" id="RV2-Aj-O0q"/>
+                                </connections>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo_Image" translatesAutoresizingMaskIntoConstraints="NO" id="zYy-c7-8jd">
+                                <rect key="frame" x="262" y="254" width="244" height="242"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="242" id="GIL-ZJ-Xh3"/>
+                                    <constraint firstAttribute="width" constant="244" id="g8l-K6-GST"/>
+                                </constraints>
+                            </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="csD-eV-37B">
+                                <rect key="frame" x="540" y="601" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <connections>
+                                    <action selector="IpToggle:" destination="Wnd-dZ-hWo" eventType="valueChanged" id="cdW-58-tyd"/>
+                                </connections>
+                            </switch>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AutoConnectText" translatesAutoresizingMaskIntoConstraints="NO" id="KyW-Ir-iTv">
+                                <rect key="frame" x="180" y="598" width="322" height="37"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZR-Ez-LbH">
+                                <rect key="frame" x="532" y="741" width="57" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="toChat"/>
+                                <connections>
+                                    <action selector="goToChat:" destination="Wnd-dZ-hWo" eventType="touchUpInside" id="PKO-jI-2hl"/>
+                                    <segue destination="nQd-W0-kmv" kind="show" id="0gT-o0-bv7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zYy-c7-8jd" firstAttribute="leading" secondItem="NtG-hg-aRv" secondAttribute="leading" constant="262" id="Fng-bb-PNt"/>
+                            <constraint firstItem="zYy-c7-8jd" firstAttribute="top" secondItem="NtG-hg-aRv" secondAttribute="top" constant="234" id="Jdh-JO-Lzn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NtG-hg-aRv"/>
+                    </view>
+                    <connections>
+                        <outlet property="autoConnectToggle" destination="csD-eV-37B" id="Tcj-p4-8CV"/>
+                        <outlet property="ipAdressInputBox" destination="5yE-aC-dPC" id="edq-rT-phB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6dL-j2-Xsh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="hNR-2y-pd7" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="847" y="32"/>
+        </scene>
+        <!--Chat Room View Controller-->
+        <scene sceneID="bkE-71-uzH">
+            <objects>
+                <viewController id="nQd-W0-kmv" customClass="ChatRoomViewController" customModule="Prototype_IOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cXj-9P-NY9">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bys-9w-T8H">
+                                <rect key="frame" x="244" y="372" width="281" height="280"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <state key="normal" backgroundImage="start"/>
+                                <connections>
+                                    <action selector="startTap:" destination="nQd-W0-kmv" eventType="touchUpInside" id="m6Z-2e-vLb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edv-AM-kjb">
+                                <rect key="frame" x="360" y="20" width="49" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backTap:" destination="nQd-W0-kmv" eventType="touchUpInside" id="DSu-m4-z8S"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="backSegue" id="yhQ-Ly-Vfi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="6Rm-0i-dWo"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonBack" destination="edv-AM-kjb" id="bpS-qK-QeR"/>
+                        <outlet property="buttonStart" destination="bys-9w-T8H" id="s0e-Cw-V8N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Uz-k7-mjA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1697.65625" y="32.8125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AutoConnectText" width="574" height="62"/>
+        <image name="BackGroung_Image" width="768" height="1024"/>
+        <image name="Logo_Image" width="179" height="168"/>
+        <image name="Register_Button" width="345" height="90"/>
+        <image name="UiDesignIp" width="768" height="1024"/>
+        <image name="start" width="50" height="50"/>
+        <image name="toChat" width="50" height="50"/>
+    </resources>
+</document>
